@@ -30,4 +30,20 @@ class CommercialFormulasTest {
 		double actual = CommercialFormulas.calculateDiscount(invoiceAmount);
 		assertEquals(expected, actual);
 	}
+	
+	@Test
+	void calculateNetPrice() {
+		double productionPrice = 100;
+		double expected = 109.35000000000001;
+		double actual = CommercialFormulas.calculateNetPrice(productionPrice);
+		assertEquals(expected, actual);
+	}
+	
+	@Test
+	void calculateProfitSurcharge() {
+		double netPrice = 100;
+		double expected = 135;
+		double actual = CommercialFormulas.calculateProfitSurcharge(netPrice);
+		assertEquals(expected, actual);
+	}
 }

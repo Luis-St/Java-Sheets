@@ -20,4 +20,14 @@ public class CommercialFormulas {
 		return invoiceAmount * 0.03;
 	}
 	
+	@Task("2.2.2 - 1.1")
+	public static double calculateNetPrice(double productionPrice) {
+		return (productionPrice + productionPrice * 0.35) * 0.81;
+	}
+	
+	@Task("2.2.2 - 1.2")
+	public static double calculateProfitSurcharge(double netPrice) {
+		return netPrice * 1.35;
+	}
+	
 }
