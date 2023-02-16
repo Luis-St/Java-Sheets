@@ -32,6 +32,7 @@ class CommercialFormulasTest {
 	}
 	
 	@Test
+	@Task("2.2.2 - 1.1")
 	void calculateNetPrice() {
 		double productionPrice = 100;
 		double expected = 109.35000000000001;
@@ -40,6 +41,7 @@ class CommercialFormulasTest {
 	}
 	
 	@Test
+	@Task("2.2.2 - 1.2")
 	void calculateProfitSurcharge() {
 		double netPrice = 100;
 		double expected = 135;
