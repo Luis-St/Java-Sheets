@@ -1,0 +1,28 @@
+plugins {
+	id "java-library"
+	id "java"
+}
+
+repositories {
+	maven {
+		url uri("${projectDir}/maven/repositories")
+	}
+}
+
+compileJava {
+	sourceCompatibility = "17"
+	targetCompatibility = "17"
+	options.compilerArgs << "-parameters"
+}
+
+dependencies {
+	implementation "net.luis:LUtils:2.1" // Utility
+}
+
+tasks.register("run", JavaExec) {
+	group = "runs"
+	main = "net.luis.Main"
+	classpath = sourceSets.main.runtimeClasspath
+	enableAssertions = true
+	standardInput = System.in
+}
